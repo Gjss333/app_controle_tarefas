@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tarefa extends Model
 {
-    use HasFactory;
+
+    use HasFactory;   
+
+    protected $fillable = [
+        'tarefa',
+        'data_limite_conclusao'
+    ];
 }

@@ -56,6 +56,6 @@ class User extends Authenticatable implements MustVerifyEmail
     //é um metodo para o processo de cadastro para novo usuários usando o fluxo de verificação de email
     public function sendEmailVerificationNotification()
     {
-        $this->notify(new VerificarEmailNotification());
+        $this->notify(new VerificarEmailNotification($this->name));
     }
 }

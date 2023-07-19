@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tarefa;
 use Illuminate\Http\Request;
 
 class TarefaController extends Controller
@@ -36,7 +37,7 @@ class TarefaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Tarefa::create($request->all());
     }
 
     /**
